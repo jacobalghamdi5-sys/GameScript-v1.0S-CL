@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404: Engine Segment Interrupted">
+	<main class="error-container">
+		<h1>404</h1>
+		<div class="accent-line"></div>
+		<p>Runtime Error: Requested specification module could not be parsed.</p>
+		<a href="/GameScript-v1.0S-CL/">Return to Core Node</a>
+	</main>
+</Layout>
+
+<style>
+	.error-container {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #e2e8f0;
+		text-align: center;
+		background: #0b0f19;
+	}
+	h1 {
+		font-size: 6rem;
+		font-family: 'Google Sans', sans-serif;
+		margin: 0;
+		color: #ff0303;
+	}
+	.accent-line {
+		height: 4px;
+		width: 60px;
+		background: #ff0303;
+		margin: 1rem 0;
+	}
+	p {
+		color: #94a3b8;
+		margin-bottom: 2rem;
+	}
+	a {
+		color: #ffffff;
+		background: #161b22;
+		border: 1px solid #30363d;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+	}
+</style>
