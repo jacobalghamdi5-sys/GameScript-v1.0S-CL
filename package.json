@@ -1,16 +1,13 @@
 {
-  "name": "gamescript",
+  "name": "gamescript-v1.0s-cl",
   "version": "1.0.0",
-  "description": "A specialized code language built to streamline mini-game canvas production.",
+  "description": "The official tracking framework for GameScript v1.0 Start engine architecture.",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
   "keywords": [
     "gamescript",
     "gcl",
-    "game-engine",
-    "mini-games"
+    "astro",
+    "game-engine"
   ],
   "author": "Jacob Alghamdi",
   "license": "Apache-2.0"
