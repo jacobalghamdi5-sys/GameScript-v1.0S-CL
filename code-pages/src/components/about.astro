@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="About GameScript">
+	<main class="about-container">
+		<Card title="Our Architectural Mission">
+			<p>GameScript v1.0 Start is engineered entirely to streamline the design and execution of modular canvas micro-games using plain-text directives.</p>
+			<a class="back-home" href="/GameScript-v1.0S-CL/code-pages/">← Back to Main Hub</a>
+		</Card>
+	</main>
+</Layout>
+
+<style>
+	.about-container {
+		padding: 4rem 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+		color: #e2e8f0;
+	}
+	.back-home {
+		display: inline-block;
+		margin-top: 1.5rem;
+		color: #ff0303;
+		text-decoration: none;
+		font-weight: 600;
+	}
+</style>
