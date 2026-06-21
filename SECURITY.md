@@ -1,11 +1,11 @@
 # Security Policy
 
-## Supported Versions
-Currently, security updates and active monitoring are dedicated exclusively to our live engine:
+## Supported System Engines
+Active patches are exclusively assigned to the current live standard:
 
-| Version | Supported |
-| ------- | --------- |
-| 1.0.S   | Yes       |
+| Version | Engine Code | Supported |
+| :--- | :--- | :--- |
+| GameScript v1.0 Start | GS-1.0S | Active |
 
-## Reporting a Vulnerability
-Please do not open public GitHub issues for critical bugs that could crash the game engine. Instead, report system vulnerabilities directly via the maintenance email: jacobalghamdi5@gmail.com.
+## Reporting Anomalies
+If you discover severe logic evaluation bypasses, report the exploit directly via the maintainer email matrix: jacobalghamdi5@gmail.com.
