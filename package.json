@@ -1,0 +1,17 @@
+{
+  "name": "gamescript",
+  "version": "1.0.0",
+  "description": "A specialized code language built to streamline mini-game canvas production.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "gamescript",
+    "gcl",
+    "game-engine",
+    "mini-games"
+  ],
+  "author": "Jacob Alghamdi",
+  "license": "Apache-2.0"
+}
