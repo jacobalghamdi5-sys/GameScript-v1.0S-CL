@@ -1,4 +1,3 @@
-
 <h1 align="center">GameScript Code Language</h1>
 Welcome to GameScript! GameScript is a code language designed to create mini-games like guess the number, shooting games, and more. 
 
@@ -50,11 +49,11 @@ ___
 | GameScript v4.0 Action | GS-4.0A | Planned |
 | GameScript v4.5 Action | GS-4.5A | Planned |
 | GameScript v5.0 Action | GS-5.0A | Planned | 
-| GameScript v5.5 Action | GS-5.5A | P8.0AU | Planned | 
-| GameScript v8.5 Apex Ultra| GS-8.5AU | Planned | 
-| GameScript v9.0 | GS-9.0 | Planned | 
-| GameScript v9.5 | GS-9.5 | Planned | 
-| GameScript v10.0 | GS-10.0 | Pltanned |
+| GameScript v5.5 Action | GS-5.5A | Planned | 
+| GameScript v8.5 Action | GS-8.5AU | Planned | 
+| GameScript v9.0 Action Pro | GS-9.0 | Planned | 
+| GameScript v9.5 Action Pro | GS-9.5 | Planned | 
+| GameScript v10.0 Action Pro | GS-10.0 | Pltanned |
 | GameScript v6.0 Apex | GS-6.0A | Planned |
 | GameScript v6.5 Apex | GS-6.5A | Planned |
 | GameScript v7.0 Apex Action | GS-7.0AA | Planned |
