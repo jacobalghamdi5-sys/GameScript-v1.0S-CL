@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameScript Code Language</title>
+    <style>
+        :root {
+            --bg-space: #0b0f19;
+            --bg-grid: rgba(22, 30, 49, 0.4);
+            --card-bg: rgba(19, 26, 42, 0.8);
+            --border-glow: #30363d;
+            --astro-purple: #bc52ee;
+            --astro-blue: #4f46e5;
+            --brand-red: #ff0303;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-space);
+            /* Astro style cosmic background grid mesh */
+            background-image: 
+                linear-gradient(to right, var(--bg-grid) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--bg-grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* --- STUNNING ASTRO ANIMATIONS --- */
+        @keyframes cosmicGlowUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes borderPulse {
+            0%, 100% { border-color: #1e293b; box-shadow: 0 0 0 rgba(0,0,0,0); }
+            50% { border-color: var(--brand-red); box-shadow: 0 0 20px rgba(255, 3, 3, 0.15); }
+        }
+
+        /* --- HERO HEADER DESIGN --- */
+        .hero {
+            text-align: center;
+            max-width: 900px;
+            margin-bottom: 5rem;
+            animation: cosmicGlowUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .badge {
+            background: linear-gradient(90deg, var(--astro-blue), var(--astro-purple));
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            margin-bottom: 1.5rem;
+            color: transparent;
+            background: linear-gradient(90deg, #ffffff, #f43f5e, var(--brand-red), #ffffff);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textGradientShift 8s ease infinite;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- GRID CONTAINER --- */
+        .grid-layout {
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+
+        .astro-card {
+            background-color: var(--card-bg);
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(12px);
+            opacity: 0;
+            animation: cosmicGlowUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .astro-card:hover {
+            transform: translateY(-4px);
+            border-color: #334155;
+        }
+
+        .code-card {
+            animation: borderPulse 6s infinite ease-in-out, cosmicGlowUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .code-window {
+            background-color: #05050a;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            font-family: "JetBrains Mono", Fira Code, monospace;
+            padding: 1.25rem;
+            overflow-x: auto;
+            white-space: pre;
+            color: #e2e8f0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+        }
+
+        /* --- STYLISH DATA ROADMAP TABLE --- */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 1.5rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #1e293b;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: rgba(30, 41, 59, 0.5);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:nth-child(3) {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="badge">Next-Gen Engine</div>
+        <h1>GameScript Code Language</h1>
+        <p class="tagline">Welcome to GameScript! GameScript is a code language designed to create mini-games like guess the number, shooting games, and more.</p>
+    </div>
+
+    <div class="grid-layout">
+        
+        <div class="astro-card code-card">
+            <h2>Guess the Number Example</h2>
+            <p style="color: var(--text-muted);">This makes a guess the number game using true logic, powered by custom environment engines.</p>
+            <div class="code-window">// GS Mode Running:::
+// GameScript v1.0 Start
+Game Function;
+# Game; Guess the number 
+___
+Math.random()
+text-box(limit"1-10"; style"Classic Modern")
+___
+subtitle.print-text:{Am thinking of an number, can you guess it? Pick a number from 1-10.}
+___
+&lt;if&gt;Number less...:
+Running::End Text/headingone.custom.print-text:{Your number is lower then the number you answered, please try again.};
+&lt;if&gt;Number more...:
+Running::End Text/headingone.custom.print-text:{Your number is higher then the number you answered, please try again.};
+&lt;if&gt;Number right...:
+Running::End Text/headingone.custom.print-text:{Your number is correct! Click "Play Again" to play again};
+___
+Embed::: "&lt;if&gt;Number right...:" / &lt;create&gt;Make button appear: button "Play again"&lt;/create&gt; Grab:"&lt;create&gt;&lt;/create&gt;"\ Function::: Restart Game
+After ""Function::: Restart Game""; &lt;repeat embed:::&gt; "&lt;if&gt;Number less...:"; "&lt;if&gt;Number more...:"; "&lt;if&gt;Number right...:"; &lt;/repeat embed:::&gt;
+___
+## Style
+Wallpaper:"Red #FF0303"
+___</div>
+        </div>
+
+        <div class="astro-card">
+            <h2>Modes of GSCL</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Architectural roadmap for upcoming runtime matrix releases.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Engine</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="color: #6ee7b7;">v1.0 Start</td><td>GS-1.0S</td><td>Complete</td></tr>
+                    <tr><td>v1.5 Pro</td><td>GS-1.1P</td><td>Planned</td></tr>
+                    <tr><td>v2.0 Start</td><td>GS-2.0S</td><td>Planned</td></tr>
+                    <tr><td>v2.5 Pro</td><td>GS-2.5P</td><td>Planned</td></tr>
+                    <tr><td>v3.0 Action</td><td>GS-3.0A</td><td>Planned</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
