@@ -1,0 +1,13 @@
+# Astro system logs
+.astro/
+dist/
+
+# Node environment dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system desktop files
+.DS_Store
+Thumbs.db
