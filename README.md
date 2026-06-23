@@ -41,7 +41,7 @@ ___
 | Full Name | Runtime Engine | Setup Satus |
 | :--- | :--- | :--- |  
 | GameScript v1.0 Start  | GS-1.0S | Complete |
-| GameScript v1.5 Pro    | GS-1.1P | Planned |
+| GameScript v1.5 Pro    | GS-1.1P | Building... |
 | GameScript v2.0 Start  | GS-2.0S | Planned | 
 | GameScript v2.5 Pro    | GS-2.5P | Planned |
 | GameScript v3.0 Action | GS-3.0A | Planned |
@@ -53,7 +53,7 @@ ___
 | GameScript v8.5 Action | GS-8.5AU | Planned | 
 | GameScript v9.0 Action Pro | GS-9.0 | Planned | 
 | GameScript v9.5 Action Pro | GS-9.5 | Planned | 
-| GameScript v10.0 Action Pro | GS-10.0 | Pltanned |
+| GameScript v10.0 Action Pro | GS-10.0 | Planned |
 | GameScript v6.0 Apex | GS-6.0A | Planned |
 | GameScript v6.5 Apex | GS-6.5A | Planned |
 | GameScript v7.0 Apex Action | GS-7.0AA | Planned |
